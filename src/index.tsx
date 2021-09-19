@@ -23,7 +23,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 //   }
 // }
 
-const theme = createTheme({
+const appTheme = createTheme({
   // Palette
   palette: {
     mode: "dark",
@@ -140,6 +140,24 @@ const theme = createTheme({
         },
         outlined: {
           borderWidth: "2px"
+        }
+      }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          padding: "24px",
+          textAlign: "left"
+        },
+        elevation: {
+          boxShadow: "none"
+        }
+      }
+    },
+    MuiCardHeader: {
+      styleOverrides: {
+        root: {
+          padding: "0 0 1rem 0"
         }
       }
     },
@@ -279,7 +297,7 @@ const theme = createTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={appTheme}>
       <CssBaseline />
       <App />
     </ThemeProvider>
