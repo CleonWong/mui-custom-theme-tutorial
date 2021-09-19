@@ -7,9 +7,7 @@ import { Card, CardHeader, Typography } from "@mui/material";
 export const TypographyPaper = (): JSX.Element => {
   return (
     <Card>
-      <CardHeader title="test">
-        <Typography variant="overline">Typography</Typography>
-      </CardHeader>
+      <CardHeader title="test" titleTypographyProps={{ variant: "overline" }} />
       <Typography variant="h1">Heading 1</Typography>
       <Typography variant="h2">Heading 2</Typography>
       <Typography variant="h3">Heading 3</Typography>
