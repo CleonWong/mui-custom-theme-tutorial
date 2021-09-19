@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import { Button, Typography } from "@mui/material";
+
+// ---
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Typography */}
+      <Typography variant="h1">Heading 1</Typography>
+      <Typography variant="h2">Heading 2</Typography>
+      <Typography variant="h3">Heading 3</Typography>
+      <Typography variant="body1">
+        body1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+      </Typography>
+      <Typography variant="body2">
+        body2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+      </Typography>
+      <Typography variant="overline">Overline (Pretitle)</Typography>
+      <br />
+      {/* Buttons */}
+      <Button variant="contained" color="primary">
+        Primary
+      </Button>
+      <Button variant="outlined" color="secondary">
+        Secondary
+      </Button>
+      <Button variant="contained" disabled>
+        Disabled
+      </Button>
+      <Button variant="contained" color="success">
+        Success
+      </Button>
+      <Button variant="contained" color="error">
+        Error
+      </Button>
+      <Button variant="contained" color="warning">
+        Warning
+      </Button>
     </div>
   );
 }
