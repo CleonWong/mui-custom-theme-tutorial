@@ -45,6 +45,11 @@ const customPalette = {
     main: "#4CD6B5",
     contrastText: "#0F552C"
   },
+  text: {
+    primary: "#FFFFFF",
+    secondary: "#8c8c8c",
+    disabled: "#282828"
+  },
   background: {
     paper: "#1A1A1A", // Card background colour.
     default: "#000000"
@@ -61,6 +66,7 @@ export const appTheme = createTheme({
     error: customPalette["error"],
     warning: customPalette["warning"],
     success: customPalette["success"],
+    text: customPalette["text"],
     background: customPalette["background"],
     contrastThreshold: 3,
     tonalOffset: 0.2
@@ -99,6 +105,9 @@ export const appTheme = createTheme({
       fontSize: "24px",
       lineHeight: "100%"
     },
+    h4: undefined, // Disable h4 variant
+    h5: undefined, // Disable h5 variant
+    h6: undefined, // Disable h6 variant
     subtitle1: {
       fontStyle: "normal",
       fontWeight: "normal",
@@ -155,7 +164,7 @@ export const appTheme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          padding: "24px",
+          // padding: "24px",
           textAlign: "left"
         },
         elevation: {
@@ -166,10 +175,17 @@ export const appTheme = createTheme({
     MuiCardHeader: {
       styleOverrides: {
         root: {
-          padding: "0 0 1rem 0"
+          padding: "1.5rem"
         },
         title: {
-          color: customPalette["primary"]["main"]
+          color: customPalette["text"]["secondary"]
+        }
+      }
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: "1.5rem"
         }
       }
     },
@@ -306,3 +322,12 @@ export const appTheme = createTheme({
     }
   }
 });
+
+// Update the Typography's variant prop options
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    h4: false;
+    h5: false;
+    h6: false;
+  }
+}
