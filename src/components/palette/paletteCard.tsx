@@ -29,7 +29,7 @@ const ColorDisplay = (props: colorDisplayProps): JSX.Element => {
         sx={{
           backgroundColor: props.color,
           width: "100%",
-          height: "30px",
+          height: "40px",
           borderRadius: "0.5rem"
         }}
       />
