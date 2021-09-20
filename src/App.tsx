@@ -1,40 +1,20 @@
 import React from "react";
 import "./App.css";
 
-import { Button } from "@mui/material";
-
 import { TypographyPaper } from "./components/typography/typography";
 import { PaletteCard } from "./components/palette/paletteCard";
+import { ButtonCard } from "./components/button/buttonCard";
 
 // ----------
 
 function App() {
   return (
     <div className="App">
-      {/* Typography */}
       <TypographyPaper />
       <br />
       <PaletteCard />
       <br />
-      {/* Buttons */}
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-      <Button variant="outlined" color="secondary">
-        Secondary
-      </Button>
-      <Button variant="contained" disabled>
-        Disabled
-      </Button>
-      <Button variant="contained" color="success">
-        Success
-      </Button>
-      <Button variant="contained" color="error">
-        Error
-      </Button>
-      <Button variant="contained" color="warning">
-        Warning
-      </Button>
+      <ButtonCard />
     </div>
   );
 }

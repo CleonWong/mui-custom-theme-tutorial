@@ -4,6 +4,7 @@ import {
   CardContent,
   Divider,
   Box,
+  Grid,
   Typography
 } from "@mui/material";
 
@@ -18,7 +19,7 @@ const ColorDisplay = (props: colorDisplayProps): JSX.Element => {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
         gap: "0.5rem"
@@ -27,8 +28,8 @@ const ColorDisplay = (props: colorDisplayProps): JSX.Element => {
       <Box
         sx={{
           backgroundColor: props.color,
-          width: "50px",
-          height: "50px",
+          width: "100%",
+          height: "30px",
           borderRadius: "0.5rem"
         }}
       />
@@ -48,81 +49,73 @@ export const PaletteCard = (): JSX.Element => {
         <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
           Primary
         </Divider>
-        <Box
-          sx={{
-            display: "flex",
-            // flexDirection: { xs: "column", md: "row" },
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            flexWrap: "wrap",
-            gap: "2rem",
-            paddingBottom: "1rem"
-          }}
-        >
-          <ColorDisplay color="primary.dark" />
-          <ColorDisplay color="primary.main" />
-          <ColorDisplay color="primary.light" />
-        </Box>
+
+        <Grid container spacing={2} sx={{ paddingBottom: "1rem" }}>
+          <Grid item xs={4}>
+            <ColorDisplay color="primary.dark" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="primary.main" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="primary.light" />
+          </Grid>
+        </Grid>
+
         <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
           Text
         </Divider>
-        <Box
-          sx={{
-            display: "flex",
-            // flexDirection: { xs: "column", md: "row" },
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            flexWrap: "wrap",
-            gap: "2rem",
-            paddingBottom: "1rem"
-          }}
-        >
-          <ColorDisplay color="text.primary" />
-          <ColorDisplay color="text.secondary" />
-          <ColorDisplay color="text.disabled" />
-        </Box>
+        <Grid container spacing={2} sx={{ paddingBottom: "1rem" }}>
+          <Grid item xs={4}>
+            <ColorDisplay color="text.primary" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="text.secondary" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="text.disabled" />
+          </Grid>
+        </Grid>
+
         <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
           Background
         </Divider>
-        <Box
-          sx={{
-            display: "flex",
-            // flexDirection: { xs: "column", md: "row" },
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            flexWrap: "wrap",
-            gap: "2rem",
-            paddingBottom: "1rem"
-          }}
-        >
-          <ColorDisplay color="background.default" />
-          <ColorDisplay color="background.paper" />
-        </Box>
+        <Grid container spacing={2} sx={{ paddingBottom: "1rem" }}>
+          <Grid item xs={4}>
+            <ColorDisplay color="background.default" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="background.paper" />
+          </Grid>
+        </Grid>
+
         <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
           Misc
         </Divider>
-        <Box
-          sx={{
-            display: "flex",
-            // flexDirection: { xs: "column", md: "row" },
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            flexWrap: "wrap",
-            gap: "2rem",
-            paddingBottom: "1rem"
-          }}
-        >
-          <ColorDisplay color="success.main" />
-          <ColorDisplay color="success.contrastText" />
-          <ColorDisplay color="warning.main" />
-          <ColorDisplay color="warning.contrastText" />
-          <ColorDisplay color="error.main" />
-          <ColorDisplay color="error.contrastText" />
-        </Box>
+        <Grid container spacing={2} sx={{ paddingBottom: "1rem" }}>
+          <Grid item xs={4}>
+            <ColorDisplay color="success.main" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="success.contrastText" />
+          </Grid>
+        </Grid>
+        <Grid container spacing={2} sx={{ paddingBottom: "1rem" }}>
+          <Grid item xs={4}>
+            <ColorDisplay color="warning.main" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="warning.contrastText" />
+          </Grid>
+        </Grid>
+        <Grid container spacing={2} sx={{ paddingBottom: "1rem" }}>
+          <Grid item xs={4}>
+            <ColorDisplay color="error.main" />
+          </Grid>
+          <Grid item xs={4}>
+            <ColorDisplay color="error.contrastText" />
+          </Grid>
+        </Grid>
       </CardContent>
     </Card>
   );

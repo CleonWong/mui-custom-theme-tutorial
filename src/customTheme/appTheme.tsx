@@ -157,7 +157,42 @@ export const appTheme = createTheme({
           padding: "10px 16px"
         },
         outlined: {
-          borderWidth: "2px"
+          boxSizing: "border-box",
+          borderWidth: "2px",
+          "&:hover": {
+            borderWidth: "2px"
+          }
+        },
+        sizeLarge: {
+          height: "48px",
+          fontSize: "1.25rem",
+          padding: "12px 20px"
+        },
+        sizeMedium: {
+          height: "40px"
+        },
+        sizeSmall: {
+          height: "34px",
+          padding: "6px 12px"
+        }
+      }
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "0.5rem"
+        },
+        colorPrimary: {
+          backgroundColor: customPalette["primary"]["main"],
+          color: customPalette["text"]["primary"]
+        },
+        colorSecondary: {
+          backgroundColor: "transparent",
+          border: "2px solid rgba(242, 79, 131, 0.5)", // primary.main but 0.5 opacity
+          color: customPalette["secondary"]["main"]
+        },
+        disabled: {
+          backgroundColor: "rgba(255, 255, 255, 0.12)" // MUI default action.disabledBackground
         }
       }
     },
