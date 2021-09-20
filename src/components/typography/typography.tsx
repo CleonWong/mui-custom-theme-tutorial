@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   Card,
   CardHeader,
@@ -15,7 +13,7 @@ export const TypographyPaper = (): JSX.Element => {
     <Card>
       <CardHeader
         title="Typography"
-        titleTypographyProps={{ variant: "overline", color: "text.secondary" }}
+        titleTypographyProps={{ variant: "overline" }}
       />
       <CardContent sx={{ paddingTop: "0px" }}>
         <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>

@@ -165,7 +165,8 @@ export const appTheme = createTheme({
       styleOverrides: {
         root: {
           // padding: "24px",
-          textAlign: "left"
+          textAlign: "left",
+          backgroundImage: "none"
         },
         elevation: {
           boxShadow: "none"

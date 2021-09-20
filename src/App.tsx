@@ -4,6 +4,7 @@ import "./App.css";
 import { Button } from "@mui/material";
 
 import { TypographyPaper } from "./components/typography/typography";
+import { PaletteCard } from "./components/palette/paletteCard";
 
 // ----------
 
@@ -12,6 +13,8 @@ function App() {
     <div className="App">
       {/* Typography */}
       <TypographyPaper />
+      <br />
+      <PaletteCard />
       <br />
       {/* Buttons */}
       <Button variant="contained" color="primary">
