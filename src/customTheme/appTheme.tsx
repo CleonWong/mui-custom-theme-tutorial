@@ -189,6 +189,9 @@ export const appTheme = createTheme({
         colorSecondary: {
           backgroundColor: "transparent",
           border: "2px solid rgba(242, 79, 131, 0.5)", // primary.main but 0.5 opacity
+          "&:hover": {
+            border: "2px solid rgba(242, 79, 131, 1)"
+          },
           color: customPalette["secondary"]["main"]
         },
         disabled: {
