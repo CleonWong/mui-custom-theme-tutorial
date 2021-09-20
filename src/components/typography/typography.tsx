@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Card, CardHeader, CardContent, Typography } from "@mui/material";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  Divider,
+  Typography
+} from "@mui/material";
 
 // ----------
 
@@ -12,6 +18,9 @@ export const TypographyPaper = (): JSX.Element => {
         titleTypographyProps={{ variant: "overline", color: "text.secondary" }}
       />
       <CardContent sx={{ paddingTop: "0px" }}>
+        <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
+          Headers
+        </Divider>
         <Typography sx={{ paddingBottom: "1rem" }} variant="h1">
           Heading 1
         </Typography>
@@ -21,6 +30,9 @@ export const TypographyPaper = (): JSX.Element => {
         <Typography sx={{ paddingBottom: "1rem" }} variant="h3">
           Heading 3
         </Typography>
+        <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
+          Body
+        </Divider>
         <Typography
           sx={{ paddingBottom: "1rem", fontWeight: "bold" }}
           variant="body1"
@@ -59,6 +71,9 @@ export const TypographyPaper = (): JSX.Element => {
         >
           Body 2 (S, italic)
         </Typography>
+        <Divider sx={{ paddingBottom: "1rem", color: "text.secondary" }}>
+          Misc
+        </Divider>
         <Typography
           sx={{ paddingBottom: "1rem" }}
           variant="button"
